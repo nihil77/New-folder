@@ -1,0 +1,80 @@
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+import mediapipe as mp
+import cv2
+import numpy as np
+
+# Define constants
+NUM_KEYPOINTS = 33  # Number of keypoints detected by BlazePose
+NUM_CLASSES = 2  # Two classes: "standing" and "sitting"
+
+# Load the MediaPipe BlazePose model
+mp_pose = mp.solutions.pose
+pose = mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.5)
+
+# Define the BlazePose feature extraction function
+def extract_blazepose_features(image):
+    # Convert the image to RGB format (MediaPipe Pose model expects RGB input)
+    image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+    # Process the image to obtain pose landmarks
+    results = pose.process(image_rgb)
+
+    # Initialize a list to store landmarks
+    landmarks = []
+
+    # Check if any landmarks were detected
+    if results.pose_landmarks is not None:
+        # Loop through the detected landmarks
+        for landmark in results.pose_landmarks.landmark:
+            landmarks.append([landmark.x, landmark.y, landmark.z])
+
+    # Flatten the list of landmarks
+    flattened_landmarks = [coord for landmark in landmarks for coord in landmark]
+
+    # Convert the landmarks to a NumPy array
+    features = np.array(flattened_landmarks)
+
+    return features
+
+# Define your neural network model
+model = keras.Sequential([
+    layers.Input(shape=(NUM_KEYPOINTS * 3,)),  # Input shape matches the number of keypoints
+    layers.Dense(64, activation='relu'),
+    layers.Dense(32, activation='relu'),
+    layers.Dense(NUM_CLASSES, activation='softmax')
+])
+
+# Compile the model
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+# Load your annotated dataset (images and labels) and preprocess it
+# Ensure that your dataset includes images and corresponding labels (0 for "standing" and 1 for "sitting")
+
+# Example data loading and preprocessing
+# X = []  # List to store extracted features
+# y = []  # List to store labels
+
+# Load and preprocess each image
+# for image_path, label in your_dataset:
+#     image = cv2.imread(image_path)
+#     features = extract_blazepose_features(image)
+#     X.append(features)
+#     y.append(label)
+
+# Convert X and y to NumPy arrays
+# X = np.array(X)
+# y = np.array(y)
+
+# Split the dataset into training and testing sets
+# Use train_test_split or another method for data splitting
+
+# Train the model
+# model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
+
+# Evaluate the model
+# test_loss, test_accuracy = model.evaluate(X_test, y_test)
+# print(f'Test accuracy: {test_accuracy}')
