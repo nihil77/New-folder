@@ -8,7 +8,7 @@ mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
 # Define the folder containing your images
-image_folder = 'C:/Users/john/Desktop/New folder/image_taijiquan'  # Replace 'your_image_folder' with your folder path
+image_folder = 'C:/Users/john/OneDrive/Desktop/New folder/image_taijiquan'  # Replace 'your_image_folder' with your folder path
 
 # Define the folder to save the JSON annotations
 json_output_folder = 'annotateimage'  # Create this folder if it doesn't exist
@@ -46,7 +46,7 @@ def process_and_save_landmarks(image_path):
 
 # Iterate through images in the folder
 for image_file in os.listdir(image_folder):
-    if image_file.endswith(('.jpg', '.jpeg', '.png', '.JPG')):
+    if image_file.endswith(('.jpg', '.jpeg', '.png', '.JPG', '.PNG', '.JFIF')):
         image_path = os.path.join(image_folder, image_file)
         process_and_save_landmarks(image_path)
 

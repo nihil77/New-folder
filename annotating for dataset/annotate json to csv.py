@@ -3,8 +3,7 @@ import csv
 import json
 
 # Define the directory containing your JSON annotation files
-annotation_dir = 'C:/Users/john/Desktop/New folder/annotateimage'
-
+annotation_dir = 'C:/Users/john/OneDrive/Desktop/New folder/annotateimage-json'
 # Define the output CSV file path
 csv_file = "dataset.csv"
 
