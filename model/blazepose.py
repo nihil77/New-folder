@@ -46,7 +46,7 @@ def is_horse_stance_correct(landmarks):
 
 
 # Open a webcam
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 # Text for the skeletal guide
 skeletal_guide = [
@@ -59,7 +59,7 @@ skeletal_guide = [
 ]
 
 # Load the custom font
-font_path = 'C:/Users/john/Downloads/fonts/Barlow/Barlow-Light.ttf'  # Path to font file
+font_path = 'model/Barlow-Light.ttf'  # Path to font file
 font = ImageFont.truetype(font_path, size=26)
 
 while cap is not None and cap.isOpened():
