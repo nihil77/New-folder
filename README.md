@@ -18,13 +18,13 @@
 8. Squat Stance (Zuo Dun)
 
 
-Evaluate the Model: Assess the model's performance using a separate validation dataset. Common evaluation metrics include mean average precision (mAP) and accuracy.
+Model Definition: Define your feedforward neural network model. The model architecture, including the number of layers, hidden units, and activation functions, depends on your specific problem. For landmark detection, you might want to use a model that takes the 33 landmarks as input features.
 
-Tune Hyperparameters: Experiment with different hyperparameters (e.g., learning rate, batch size) to optimize the model's performance.
+Loss Function: Choose an appropriate loss function for your task. For keypoint detection, Mean Squared Error (MSE) loss is commonly used.
 
-Deployment: Once you are satisfied with the model's performance, you can deploy it in your desired application, whether that's a web application, mobile app, or other platforms.
+Training: Train your model on the training set using an optimization algorithm (e.g., Adam or SGD) and the chosen loss function. Use the validation set to monitor your model's performance and prevent overfitting.
 
-Inference: Use the trained model to perform inference on new images or video frames to detect Horse Stance.
+Evaluation: Evaluate your trained model on the test set to assess its performance. Depending on your task, you can use various evaluation metrics like Mean Per Joint Position Error (MPJPE), Percentage of Correct Keypoints (PCK), or custom metrics that suit your requirements.
 
-
+Hyperparameter Tuning: Experiment with different hyperparameters like the number of hidden layers, the number of hidden units, learning rate, and activation functions to optimize your model's performance.
  
