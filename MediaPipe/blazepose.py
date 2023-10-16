@@ -28,9 +28,9 @@ def is_horse_stance_correct(landmarks):
         right_knee_y = landmarks[24].y
 
         # Tolerance values (you may need to adjust these)
-        hip_width_tolerance = 0.5  # Tolerance for hip width
-        knee_distance_tolerance = 1  # Tolerance for knee distance
-        vertical_tolerance = 0.1  # Tolerance for vertical alignment (0.1, 0.2)
+        hip_width_tolerance = 5  # Tolerance for hip width
+        knee_distance_tolerance = 5  # Tolerance for knee distance
+        vertical_tolerance = 0.5  # Tolerance for vertical alignment (0.1, 0.2)
 
         # Check if the keypoints match criteria for Horse Stance
         is_correct_horse_stance = (
@@ -48,6 +48,7 @@ def is_horse_stance_correct(landmarks):
 # Open a webcam
 cap = cv2.VideoCapture(0)
 
+'''
 # Text for the skeletal guide
 skeletal_guide = [
     "Get ready to perform the Horse Stance:",
@@ -57,6 +58,7 @@ skeletal_guide = [
     "4. Hold for 30s-1min, breathing deeply.",
     "5. Slowly straighten legs to exit.",
 ]
+'''
 
 # Load the custom font
 font_path = 'model/Barlow-Light.ttf'  # Path to font file
@@ -84,11 +86,11 @@ while cap is not None and cap.isOpened():
         
         if is_correct_horse_stance:
             text_color = (0, 255, 0)  # Green text
-            status_text = "Horse Stance Detected"
+            status_text = "Good"
             skeleton_color = (0, 255, 0)  # Green lines
         else:
             text_color = (0, 0, 255)  # Red text
-            status_text = "Not in Horse Stance"
+            status_text = "Bad"
             skeleton_color = (0, 0, 255)  # Red lines
 
         # Draw status text using Pillow
@@ -107,6 +109,7 @@ while cap is not None and cap.isOpened():
             connection_drawing_spec=mp_drawing.DrawingSpec(color=skeleton_color, thickness=1)
         )
 
+        '''
         # Display the skeletal guide with custom font and text color
         for i, text in enumerate(skeletal_guide):
           if is_correct_horse_stance:
@@ -114,10 +117,10 @@ while cap is not None and cap.isOpened():
           else:
             guide_text_color = (0, 0, 255)  # Red text
 
-            cv2.putText(frame, text, (20, 20 + 30 * i), cv2.FONT_HERSHEY_TRIPLEX, 0.5, guide_text_color, 1)
-
+            cv2.putText(frame, text, (10, 20 + 30 * i), cv2.FONT_HERSHEY_TRIPLEX, 0.5, guide_text_color, 1)
+        '''
     # Resize the frame
-    frame = cv2.resize(frame, (1300, 800))  
+    frame = cv2.resize(frame, (900, 600))  
 
     # Display the frame
     cv2.imshow("8 Foundational Taijiquan Stances", frame)

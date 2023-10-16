@@ -1,14 +1,17 @@
 # New-folder
 
-1. annotate the image into json file using mediapipe
-2. annotate the json file into final csv
+DEVELOPMENT OF TAICHNO: AN EDUCATIONAL ASSESSMENT TOOL FOR TAIJIQUAN’S STANCE WITH REAL-TIME ACCURACY AND FEEDBACK UTILIZING BLAZE POSE MEDIAPIPE ALGORITHM
+
+Algo - 
+Model - 
+Developmental -  
 
  Text to speech, 
  Background music,
  Assessing the user, 
 
 
-1. Horse Stance (Ma Bu) @
+1. Horse Stance (Ma Bu) 
 2. Mountain Climbing Stance or Bow-Arrow Stance (Deng Shan Bu, Gong JianBu)
 3. Sitting on Crossed Legs Stance (Zuo Pan Bu)
 4. Four-Six Stance (Si Liu Bu)
