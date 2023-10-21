@@ -3,9 +3,9 @@ import csv
 import json
 
 # Define the directory containing your JSON annotation files
-annotation_dir = 'C:/Users/john/OneDrive/Desktop/New folder/annotateimage-json'
+annotation_dir = 'C:/Users/john/OneDrive/Desktop/New folder/annotateimage'
 # Define the output CSV file path
-csv_file = "dataset.csv"
+csv_file = "tai.csv"
 
 # Initialize a CSV writer
 with open(csv_file, mode="w", newline="") as csvfile:
