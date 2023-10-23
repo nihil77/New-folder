@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .light {
-  --mainColor: #d74a2a;
-  --hoverColor: #ef917c;
+  --mainColor: #05A14F;
+  --hoverColor: #8aedb9;
   --backgroundColor: #f1f8fc;
   --darkOne: #2d3236;
   --darkTwo: #2d3236;
-  --lightOne: #d74a2a;
+  --lightOne: #5d5d5c;
   --lightTwo: #aaa;
 }
 
