@@ -5,7 +5,7 @@ import mediapipe as mp
 
 # Load the MediaPipe BlazePose model
 mp_pose = mp.solutions.pose
-pose = mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.5, min_tracking_confidence=0.5)
+pose = mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.8, min_tracking_confidence=0.8)
 
 # Define the folder containing your images
 image_folder = 'C:/Users/john/OneDrive/Desktop/New folder/image_taijiquan'  # Replace 'your_image_folder' with your folder path
