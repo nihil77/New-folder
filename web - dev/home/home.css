@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.light {
+  --mainColor: #d74a2a;
+  --hoverColor: #ef917c;
+  --backgroundColor: #f1f8fc;
+  --darkOne: #2d3236;
+  --darkTwo: #2d3236;
+  --lightOne: #d74a2a;
+  --lightTwo: #aaa;
+}
+
+.dark {
+  --mainColor: #898581;
+  --hoverColor: #9d938a;
+  --backgroundColor: #192e3a;
+  --darkOne: #f3f3f3;
+  --darkTwo: #fff;
+  --lightOne: #ccc;
+  --lightTwo: #e7e3e3;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.background{
+background-image: url('Background.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}

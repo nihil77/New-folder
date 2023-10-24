@@ -32,6 +32,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.background{
+background-image: url('Background.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
@@ -88,7 +95,7 @@ header .container {
 }
 
 .logo img {
-  width: 40px;
+  width: 100px;
   margin-right: 0.6rem;
   margin-top: -0.6rem;
 }
