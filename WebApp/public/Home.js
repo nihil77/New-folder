@@ -53,5 +53,5 @@ events();
 // JavaScript to navigate to the signup page when a button is clicked
 document.getElementById('signupLink').addEventListener('click', function(event) {
   event.preventDefault(); // Prevent the default link behavior
-  window.location.href = 'http://127.0.0.1:5501/WebApp/SignupAndSignin.html';
+  window.location.href = 'http://127.0.0.1:5501/WebApp/public/SignupAndSignin.html';
 });

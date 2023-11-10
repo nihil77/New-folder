@@ -1,0 +1,12 @@
+{
+  "name": "new-folder",
+  "version": "1.0.0",
+  "description": "DEVELOPMENT OF TAICHNO: AN EDUCATIONAL ASSESSMENT TOOL FOR TAIJIQUAN’S STANCE WITH REAL-TIME ACCURACY AND FEEDBACK UTILIZING BLAZE POSE MEDIAPIPE ALGORITHM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

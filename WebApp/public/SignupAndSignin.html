@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style/SignupAndSignin.css">
+
+    <title>Log In Sign Up Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="s-wrapper flex-class">
+            <div class="content flex-class">
+                <div class="container flex-class">
+                    <p class="name">TAICHNO</p>
+                    <div class="warning" id="login-warning"></div>
+                    <input type="email" name="email" id="login-email" placeholder="Email">
+                    <input type="password" name="password" id="login-password" placeholder="Password">
+                    <button id="login-button">Log In</button>
+                    <p class="divider flex-class"><span></span>OR<span></span></p>
+                    <div class="fb flex-class">
+                        <img src="./img/facebook.png" alt="facebook icon">
+                        <div class="fb-p">Log in with Facebook</div>
+                    </div>
+                    <div class="forgot-password">Forgot Password?</div>
+                </div>
+                <div class="sub-container flex-class">
+                    <p>Don't have an account?<span id="signup-page-link">Sign Up</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-wrapper flex-class">
+            <div class="content flex-class">
+                <div class="container flex-class">
+                    <p class="name">TAICHNO</p>
+                    <div class="warning" id="signup-warning"></div>
+                    <input type="email" name="email" id="signup-email" placeholder="Email">
+                    <input type="text" name="name" id="signup-name" placeholder="Full Name">
+                    <input type="password" name="password" id="signup-password" placeholder="Password">
+                    <button id="signup-button">Sign Up</button>
+                    <p class="divider flex-class"><span></span>OR<span></span></p>
+                    <div class="fb flex-class">
+                        <img src="./img/facebook.png" alt="facebook icon">
+                        <div class="fb-p">Log in with Facebook</div>
+                    </div>
+                </div>
+                <div class="sub-container flex-class">
+                    <p>Have an account?<span id="login-page-link">Log In</span></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="loged-in s-wrapper flex-class">
+        <div class="content flex-class">
+            <div class="container flex-class">
+                <button id="signout-button">Sign Out</button>
+                </div>
+            </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>      
+    
+
+
+
+    <script defer src="SignupAndSignin.js"></script>
+
+
+</body>
+</html>

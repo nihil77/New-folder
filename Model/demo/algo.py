@@ -32,8 +32,8 @@ def is_horse_stance_correct(landmarks):
         right_knee_y = landmarks[24].y
 
         # Tolerance values (you may need to adjust these)
-        hip_width_tolerance = 0.1  # Tolerance for hip width
-        knee_distance_tolerance = 0.1  # Tolerance for knee distance
+        hip_width_tolerance = 0.2  # Tolerance for hip width
+        knee_distance_tolerance = 0.2  # Tolerance for knee distance
         vertical_tolerance = 0.5  # Tolerance for vertical alignment (0.1, 0.2)
 
         # Check if the keypoints match criteria for Horse Stance
